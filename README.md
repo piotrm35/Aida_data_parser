@@ -10,7 +10,7 @@ One can open this csv file in QGIS as a point layer (set the Geometry CRS to EPS
 # AidaLight:
 AidaLight is an Android very simple application that takes a photo every 0.7 second and save it into device memory folder named AidaLight_xxxx
 with location data in a files. Be sure to chose the oldest (the biggest) location data file for this script.
-AidaLight is a part of an old project with source code lost, so it is needed a conversion script for location data.
+AidaLight is a part of my old project with source code lost, so it is needed a conversion script for location data.
 
 # How to run it directly on Windows (Windows 10 x64):
 Unpack the file Aida_data_parser.7z and run Aida_data_parser.exe.
