@@ -2,7 +2,7 @@ Aida_data_parser
 
 # Purpose:
 Road inspection.
-Python 3.x script that takes location data from AidaLight application data (in selected file) and saves it do csv file (in the same folder).
+Python 3.x script that takes location data from AidaLight application data (in selected file) and saves it to csv file (in the same folder).
 
 # What do next:
 One can open this csv file in QGIS as a point layer (set the Geometry CRS to EPSG:4326) and view the photos by road_inspection_viewer plugin.
