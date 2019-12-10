@@ -1,7 +1,7 @@
 Aida_data_parser
 
 # Przeznaczenie:
-Fptprejestracja pasa drogowego.
+Fotorejestracja pasa drogowego.
 Skrypt Python 3.x, który pobiera dane o lokalizacji z wybranego pliku aplikacji AidaLight i zapisuje je jako plik csv (w tym samym folderze).
 
 # Co dalej:
