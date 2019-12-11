@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPicture_record
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+29.127.jpg</right_picture_file_name>
+<position_latitude>N 53.78397136666667</position_latitude>
+<position_longitude>E 20.479126666666666</position_longitude>
+</Picture_record>
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+32.129.jpg</right_picture_file_name>
+<position_latitude>N 53.78392303333334</position_latitude>
+<position_longitude>E 20.47943666666667</position_longitude>
+</Picture_record>
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+33.130.jpg</right_picture_file_name>
+<position_latitude>N 53.7838747</position_latitude>
+<position_longitude>E 20.479731666666666</position_longitude>
+</Picture_record>
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+35.131.jpg</right_picture_file_name>
+<position_latitude>N 53.78384803333334</position_latitude>
+<position_longitude>E 20.479870000000002</position_longitude>
+</Picture_record>
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+36.132.jpg</right_picture_file_name>
+<position_latitude>N 53.7838247</position_latitude>
+<position_longitude>E 20.480008333333334</position_longitude>
+</Picture_record>
+<Picture_record>
+<right_picture_file_name>Right_cam_2019-12-11_01+58+37.133.jpg</right_picture_file_name>
+<position_latitude>N 53.78378303333333</position_latitude>
+<position_longitude>E 20.480275</position_longitude>
+</Picture_record>
+</ArrayOfPicture_record>
