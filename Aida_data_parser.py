@@ -5,7 +5,7 @@
   Python 3.x script that takes data from AidaLight application data (in selected file) and saves it to csv file (in the same folder).
   One can open this csv file in QGIS as a point layer (set the Geometry CRS to EPSG:4326) and view the photos by road_inspection_viewer plugin.
 
-  version: 0.1.1
+  version: 0.1.2
   
   --------------------------------------
   Date : 05.12.2019
@@ -105,7 +105,7 @@ class EXIF_parser(QWidget):
             try:
                 res = float(lat_lon_tuple[k])
                 for i in range(k + 1, n):
-                    res += float(lat_lon_tuple[i]) / (m * 60.0)
+                    res += float(lat_lon_tuple[i]) / (60.0 ** m)
                     m += 1
                 return str(res)
             except:
