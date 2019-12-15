@@ -5,7 +5,7 @@
   Python 3.x script that takes data from AidaLight application data (in selected file) and saves it to csv file (in the same folder).
   One can open this csv file in QGIS as a point layer (set the Geometry CRS to EPSG:4326) and view the photos by road_inspection_viewer plugin.
 
-  version: 0.1.2
+  version: 0.1.3
   
   --------------------------------------
   Date : 05.12.2019
@@ -25,6 +25,7 @@ import os, sys
 import time
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog
 import xml.etree.ElementTree as ET
+from Lat_Lon_extractor import Lat_Lon_extractor
 
 		
 #========================================================================================================
@@ -37,11 +38,13 @@ class EXIF_parser(QWidget):
     def __init__(self):
         super().__init__()
         self.work()
+        input('Press Enter to exit:')
         sys.exit()
         
 
     def work(self):
         try:
+            lat_Lon_extractor = Lat_Lon_extractor()
             Aida_data_file_path = str(QFileDialog.getOpenFileName(self, "Select Aida data file:", None,"text files (*.txt)")[0])
             result_file_full_path = os.path.join(os.path.split(Aida_data_file_path)[0], "QGIS_CSV_EPSG4326_" + time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime(time.time())) + ".csv")
             result_file = open(result_file_full_path, 'w')
@@ -58,11 +61,11 @@ class EXIF_parser(QWidget):
                     try:
                         if str(child2.tag) == 'position_latitude':
                             lat_tuple = str(child2.text).split(' ')
-                            lat = self.get_lat_lon_str(lat_tuple)
+                            lat = lat_Lon_extractor.get_lat_lon_str(lat_tuple)
                             continue
                         if str(child2.tag) == 'position_longitude':
                             lon_tuple = str(child2.text).split(' ')
-                            lon = self.get_lat_lon_str(lon_tuple)
+                            lon = lat_Lon_extractor.get_lat_lon_str(lon_tuple)
                             continue
                         if str(child2.tag) == 'right_picture_file_name':
                             if not file_names:
@@ -90,35 +93,6 @@ class EXIF_parser(QWidget):
             print('work Exception: ' + str(e))
         finally:
             result_file.close()
-
-
-    def get_lat_lon_str(self, lat_lon_tuple):
-        n = len(lat_lon_tuple)
-        if n == 1 and self.is_float(lat_lon_tuple[0]):
-            return lat_lon_tuple[0]
-        if n > 1:
-            if self.is_float(lat_lon_tuple[0]):
-                k = 0
-            else:
-                k = 1
-            m = 1
-            try:
-                res = float(lat_lon_tuple[k])
-                for i in range(k + 1, n):
-                    res += float(lat_lon_tuple[i]) / (60.0 ** m)
-                    m += 1
-                return str(res)
-            except:
-                pass
-        return None
-
-
-    def is_float(self, tx):
-        try:
-            f = float(tx)
-            return True
-        except:
-            return False
 
 
 #========================================================================================================
