@@ -8,8 +8,9 @@ Skrypt Python 3.x, który pobiera dane o lokalizacji z wybranego pliku aplikacji 
 Mo¿na otworzyæ ten plik csv w QGIS jako warstwê punktow¹ (ustawiæ Geometry CRS na EPSG:4326) i przegl¹daæ zdjêcia za pomoc¹ wtyczki road_inspection_viewer.
 
 # AidaLight:
-AidaLight to bardzo prosta aplikacja na Androida, która robi zdjêcie co 0,7 sekundy i zapisuje je w folderze pamiêci urz¹dzenia o nazwie AidaLight_xxxx
-z danymi lokalizacji w plikach. Nale¿y wybraæ najstarszy (najwiêkszy) plik danych lokalizacji dla tego skryptu.
+AidaLight (instalator jest w folderze AidaLight_0.7_install) to bardzo prosta aplikacja na Androida, która robi zdjêcie co 0,7 sekundy i zapisuje 
+je w folderze pamiêci urz¹dzenia o nazwie AidaLight_xxxx z danymi lokalizacji w plikach. Nale¿y wybraæ najstarszy (najwiêkszy) plik danych lokalizacji 
+dla tego skryptu.
 AidaLight jest czêœci¹ mojego starego projektu z utraconym kodem Ÿród³owym, dlatego potrzebny jest skrypt konwersji danych lokalizacji.
 
 # Uruchomienie bezpoœrednio w systemie Windows (Windows 10 x64):
